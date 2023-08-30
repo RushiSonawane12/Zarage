@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="1tr">
+    <head>
+  <script>
+  function preventBack(){window.history.forward();}
+  setTimeout("preventBack()", 0);
+  window.onunload=function(){null};
+</script>
+        <meta charset="UTF-8">
+        
+        <meta name="viewport" contect="width=device-width,initial-scale=1.0">
+        <title> signin </title> 
+         
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link rel="stylesheet" href="static/css/signin.css"/>
+             <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="static/images/favicon.png" type="image/x-icon">
+  <title>Zarage</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css " />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.static/css" />
+  <!-- font awesome style -->
+  <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+    </head>
+    <div class="fs-4 mb-3">
+  <div class="col">
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-success alert-dismissble fade show" role="alert">
+    {{message}}</div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+</div>
+</div>
+    <body>
+
+        <div class="wrapper">
+            <div class="title"><span>Login Form</span></div>
+                <form action="{{ url_for('usersignin') }}" method="post">
+                <div class="msg">{{ msg }}</div>
+                <div class="row">
+                    <i class="fas fa-envelope-square"></i>
+                    <input  id="email_id" name="email_id" type="text" placeholder="Enter Your email_id" required/>
+                </div>
+                    <div class="row">
+                    <i class="fas fa-lock"></i>
+                    <input  id="password" name="password" type="password" placeholder="Enter Your Password" required/>
+                </div>
+                    <div class="pass"><a href="/forgotpassword">Forgot password?</a></div>
+                    <div class="row button">
+                    <input type="submit"  value="Login In"></br></br>
+                </div>
+                 <div class="signup-link">Don't have a account?<a href="/usersignup">Signup Here</a></div>
+                
+                </form>
+            
+            </div>
+        </div>
+       
+    </body>
+    
+</html>
+

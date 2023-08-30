@@ -1,0 +1,62 @@
+
+{% extends "base.html" %}  
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        {% block content %}
+        <h3 class="fs-4 mb-3"></h3>
+            <div class="col">
+                <form action="/areareportdownload" method="">
+                    <div>
+                     <button type="submit" class="btn btn-secondary">Download</button></div><br>
+                <table class="table bg-white rounded shadow-sm  table-hover">
+                    <thead>
+                         <tr>
+                                   
+                            <th>Srno</th>
+                            <th>Customer Name</th>
+                            <th>Model</th>
+                            <th>Car Type</th>
+                            <th>Service_Type</th>
+                            <th>Respond_Date</th>
+                            <th>Total_Bill</th>
+                            <th>Pincode</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% set n=namespace(c=0) %}
+                                {% for data in customer %}
+                                   
+                                    <tr>
+                                        {% set n.c=n.c+1 %}
+                                        <td>{{n.c}}</td>
+                                        <td>{{data [0]}}</td>
+                                        <td>{{data [1]}}</td>
+                                        <td>{{data [2]}}</td>
+                                        <td>{{data [3]}}</td>
+                                        <td>{{data [4]}}</td>
+                                        <td>{{data [5]}}</td>
+                                        <td>{{data [6]}}</td>
+                               
+                               {% endfor %}
+                               
+                            </tbody>
+                        </table>
+                        <div class="container-fluid px-4 primary-text">
+            <div class="col-md-3">
+                            <div>
+                                <img src="static/images/area.jpg" alt="" id='imagesize'>
+
+                            </div>
+                            
+                        </div>
+            </div>
+                    </form>
+                    </div>
+                </div>
+
+            </div>
+       
+    {% endblock %}
+</body>
+</html>

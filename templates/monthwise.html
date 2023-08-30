@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html>
+<body>
+<div class="col">
+ <center>
+<table class="table bg-white rounded shadow-sm  table-hover" style="width:60%">
+    <tbody>
+        
+ <form action="monthwisereport" method="POST">
+  <tr>
+    <th>
+  <label for="">Select Report Type</label></th>
+              <td><select name="report">
+                  <option value="">select report type</option>
+                  <option name="report" value="Pending">Pending Service</option>
+                  <option name="report" value="completed">Completed Service</option>
+                  <option name="report" value="Billpending">Bill Pending</option>
+                  <option name="report" value="Rejected">Rejected Service</option>
+                  <option name="report" value="repeated">Most Repeated Customer</option>
+                  <option name="report" value="Area">Area Wise</option>
+                   <option name="report" value="highservice">Most selected service</option>
+
+
+              </select></td>
+    </tr>
+    <tr>
+    <th><label for="date">Select Date From</label></th>
+          <td><input type="date" name="date1" data-date-format="YYYY MMMM DD" min="2019-01-01" ></td>
+        </tr>
+        <tr>
+          <th>
+            <label for="date">Select Date TO</label></th>
+            <td>
+          <input type="date" name="date2" data-date-format="YYYY MMMM DD" min="2019-01-01" ></td>
+          <td>
+
+          </tr>
+          <tr>
+          <td>
+         <button type="submit" class="btn btn-secondary">View</button></h5></td></tr>
+
+    </form>
+  </tbody>
+  </table>
+
+    </center>
+</body>
+</html>
+{% endblock %}

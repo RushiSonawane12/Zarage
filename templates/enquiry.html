@@ -1,0 +1,27 @@
+{% extends "userbase.html" %}
+ 
+{% block content %}
+<style>
+
+</style>
+<h3 class="fs-4 mb-3 primary-text"><center>Enquiry Form</center></h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover " style="width:50%" align="center">
+      <tbody>
+        <form action="/enquiry" method="post">
+          <div class="msg primary-text" align="center">{{ msg }}</div>
+        <tr>                    
+          <th>Description</th>
+          <td>
+                <textarea name="description" rows="5" cols="50" required></textarea>
+          </td>
+          </tr>
+          <tr>
+          <td><button type="submit" class="btn btn-secondary">Submit</button></td>
+          </tr>
+          </tbody>
+      </form>
+     </div>
+    </div>
+    </div>
+{% endblock %}

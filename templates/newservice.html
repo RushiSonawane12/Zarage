@@ -1,0 +1,57 @@
+
+{% extends "base.html" %}
+<html lang="en">
+
+<body>
+{% block content %}
+
+ <div class="fs-4 mb-3">
+  <div class="col">
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-success alert-dismissble fade show" role="alert">
+    {{message}}</div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+</div>
+</div>
+<h3 class="fs-4 mb-3">Newly service Request</h3>
+<div class="col">
+
+ <table class="table bg-white rounded shadow-sm  table-hover">
+    <thead>
+      <tr>                    
+        
+              <th>Srno</th>
+              <th>Service_no</th>
+              <th>Name</th>
+              <th>Register Date</th>
+              <th>Email_id</th>
+              </tr>
+              </thead>
+              {% set n=namespace(c=0) %}
+            <tbody>
+            {% for data in customer %}
+            <tr>
+              {% set n.c=n.c+1 %}
+              <td>{{n.c}}</td>
+              <td>{{data [1]}}</td>
+              <td>{{data [2]}}</td>
+              <td>{{data [3]}}</td>
+              <td>{{data [4]}}</td>
+              
+      
+      <td width="130">
+        <a href="/editnewservice/{{data [0]}}" class="btn btn-secondary btn-sm">View</a>
+          </td>
+    </tr> 
+    {% endfor %}
+    
+    </tbody> </table>
+</div>
+{% endblock %}
+
+</body>
+</html>

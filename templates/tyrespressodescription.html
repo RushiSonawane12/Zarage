@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+ <!DOCTYPE html>
+<html lang="en">
+<body>
+{% block content %}
+
+
+
+<center><h3 class="fs-4 mb-3">Reason for deleting of service</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover" style="width:50%">
+      <tbody>
+        
+        <form action="/deletespressotyre/{{data[0]}}/{{data[1]}}" method="POST"> 
+         
+          <tr>                    
+          <th>Description</th>
+          <td>
+                <textarea name="description" rows="3" cols="30" required></textarea>
+          </td>
+          </tr>
+            <tr>
+            <td><button type="submit" class="btn btn-secondary">Save</button>
+            </td>
+          </tr>
+            </tbody>     
+      </form>
+      </tbody>
+
+   
+     </div>
+    </div>
+    </div>  </center> 
+{% endblock %}
+</body>
+</html>

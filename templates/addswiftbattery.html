@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+ <!DOCTYPE html>
+<html lang="en">
+<body>
+{% block content %}
+
+
+
+<h3 class="fs-4 mb-3">Add Service</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover">
+      <tbody>
+        
+        <form action="" method="post"> 
+            <tr>                   
+            <th>Battery Name</th>
+            <td>
+                  <input type="text" name="batteryname" placeholder="batteryname" required>
+            </td>
+            </tr>
+            <tr>
+            <th>Capacity</th>
+            <td>
+                <input type="text" name="capacity" placeholder="capacity" required>
+            </td>
+            </tr>
+            <tr>
+            <th>Warranty</th>
+            <td>
+                <input type="text" name="warranty" placeholder="Warranty" required>
+            </td>
+            </tr>
+            <tr>
+            <th>Price</th>
+            <td>
+                  <input type="text" name="price" placeholder="Price"
+                   required>
+            </td>
+            </tr>
+            <tr>
+            <td><button type="submit" class="btn btn-secondary">Submit</button>
+            </td>
+          </tr>
+            </tbody>     
+      </form>
+      </tbody>
+     </div>
+    </div>
+    </div>   
+{% endblock %}
+</body>
+</html>

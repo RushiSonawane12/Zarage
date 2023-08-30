@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+<html lang="en">
+<body>
+{% block content %}
+
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        {{ message }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endwith %}
+
+
+
+
+
+
+<h3 class="fs-4 mb-3">Total Service</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover">
+      <thead>
+        <tr>
+            <th>Srno</th>                  
+            <th>Service_id</th>
+            <th>Customer Name</th>
+            <th>Customer Responds Date</th>
+            </tr>
+          </thead>
+        <tbody>
+            {% set n=namespace(c=0) %}
+          {% for data in customer %}
+            {% set n.c=n.c+1 %}
+        <tr>
+          <td>{{n.c}}</td>
+          <td>{{data [1]}}</td>
+          <td>{{data [2]}}</td>
+          <td>{{data [3]}}</td>
+          <td width="130">
+            <a href="/pendingedit/{{data[1]}}" class="btn btn-secondary btn-sm">view</a>
+        </tr> 
+          {% endfor %}
+      
+
+        </tbody>
+        </table>
+         </div>
+    </div>
+    
+    </div>
+{% endblock %}
+
+</body>
+</html>

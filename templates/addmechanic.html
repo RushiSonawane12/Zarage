@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+ <!DOCTYPE html>
+<html lang="en">
+<body>
+{% block content %}
+<div class="fs-4 mb-3">
+  <div class="col">
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-success alert-dismissble fade show" role="alert">
+    {{message}}</div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+  </div>
+</div>
+
+<h3 class="fs-4 mb-3 primary-text" align="center">Add mechanic</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover" style="width:50%" align="center">
+      <tbody>
+        
+        <form action="{{ url_for('addmechanic') }}" method="POST"> 
+            
+          <tr>                   
+          <th>Mechanic Name</th>
+          <td>
+                <input type="text" name="name" placeholder="Enter Mechanic Name">
+          </td>
+          </tr>
+         
+          <tr>
+          <th>Password</th>
+          <td>
+                <input type="text" name="password" placeholder="password">
+          </td>
+          </tr>
+          <td><button type="submit" class="btn btn-secondary">Add</button>
+          </td>
+        </tr>
+          </tbody>     
+      </form>
+     </div>
+    </div>
+    </div>   
+{% endblock %}
+</body>
+</html>

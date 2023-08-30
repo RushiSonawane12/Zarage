@@ -1,0 +1,44 @@
+{% extends "userbase.html" %}
+
+{% block content %}
+<html>
+<head> 
+<style>
+    select {
+        width: 250px;
+        margin: 10px;
+        height: 50px;
+        border-radius: 5px;
+    }
+    select:focus {
+        min-width: 250px;
+        width: auto;
+         border-radius: 5px;
+
+    }
+</style>
+</head>     
+
+<body>
+  <form action="" method="POST">
+  <center><h2 style="color:#ff5722">Select the Model to display the data</h2>
+  
+      <div class="form_wrap">
+        
+          <select name="model" >
+                  <option value="">select the Model</option>
+                   
+                        
+                        {% for value in data %}
+                      <option value={{value[0]}} name="model">{{value[0]}}</option>
+                      {% endfor %}
+          </select>
+          <button type="submit" class="btn btn-secondary">Submit</button>
+      </div></center>
+    
+</form>
+
+</body>
+
+</html>
+{% endblock %}

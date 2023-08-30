@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+<html lang="en">
+<body>
+{% block content %}
+
+
+<center><h3 class="fs-4 mb-3">Enquiry</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover" style="width:50%">
+      {% for value in customer %} 
+        <form action="/enquiryresponded/{{value[0]}}/{{value[2]}}" method="post"> 
+           
+            
+             <tr>               
+            <th>Enquiry_id:</th>
+            <td>
+                 {{value[0]}}
+            </td>
+           </tr>
+           <tr>
+              <th>Customer Name:</th>
+              <td>
+               {{value[1]}}
+              </td>
+            </tr>
+            <tr>
+              <th>Email_id:</th>
+              <td>
+               {{value[2]}}
+            </td>
+           </tr>
+           <tr>
+              <th>
+              Description:</th>
+              <td>
+               {{value[3]}}
+            </td>
+            </tr>
+            
+          {% endfor %}
+          <tr>                    
+          <th>Admin Status</th>
+          <td>
+                <textarea name="description" rows="5" cols="50" required></textarea>
+          </td>
+          </tr>
+            </tbody>
+            <td><button type="submit" class="btn btn-secondary">Send</button> 
+            
+      
+      </form>
+      </table>
+         </div>
+    </div>
+    
+    </div></center>
+{% endblock %}
+
+</body>
+</html>

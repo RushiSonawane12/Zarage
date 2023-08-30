@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+ <!DOCTYPE html>
+<html lang="en">
+<body>
+{% block content %}
+
+
+
+<center><h3 class="fs-4 mb-3 primary-text">Pending Bill</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover">
+      <tbody>
+        <table class="table bg-white rounded shadow-sm  table-hover" style="width:60%" >
+      <tbody>
+
+        {% for value in data1 %} 
+        <form action="/pendingbillupdate/{{value[1]}}" method="POST"> 
+             <tr>               
+            <th>Service_no:</th>
+            <td>
+                 {{value[0]}}
+            </td>
+           </tr>
+           {% for value in data %}
+           <tr>
+              <th>Customer Name:</th>
+              <td>
+               {{value}}
+              </td>
+            </tr>
+            {% endfor %}
+            <tr>
+              <th>Bill no:</th>
+              <td>
+               {{value[1]}}
+            </td>
+           </tr>
+           <tr>
+              <th>
+              Total Bill:</th>
+              <td>
+               {{value[2]}}
+            </td>
+            </tr>
+            {% endfor %}
+            <tr>
+               <th><label for="">Bill Status</label></th>
+              <td><select name="billstatus">
+                 
+                  <option name="billstatus" value="notpaid">NotPaid</option>
+                  <option name="billstatus" value="paid">Paid</option>
+              </select><td>
+              </tr>   
+            <tr>
+            <td><button type="submit" class="btn btn-secondary">Update</button>
+        </tr> 
+      </form>
+      </tbody>  
+     </div>
+    </div>
+    </div>   
+  </center> 
+{% endblock %}
+</body>
+</html>

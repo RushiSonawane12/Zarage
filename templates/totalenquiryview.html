@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+<html lang="en">
+<body>
+{% block content %}
+
+
+<center><h3 class="fs-4 mb-3">Enquiry Detail</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover" style="width:50%">
+      {% for value in customer %} 
+        <form action="" method="post"> 
+           
+            
+             <tr>               
+            <th>Email_id:</th>
+            <td>
+                 {{value[0]}}
+            </td>
+           </tr>
+           <tr>
+              <th>Responded Date</th>
+              <td>
+               {{value[1]}}
+              </td>
+            </tr>
+            <tr>
+              <th>
+              Admin Status:</th>
+              <td>
+               {{value[2]}}
+            </td>
+           </tr>
+           <tr>
+              <th>
+              Description:</th>
+              <td>
+               {{value[3]}}
+            </td>
+            </tr>
+            
+
+          {% endfor %}
+          <td width="130">
+            <a href="/totalenquiryrespond" class="btn btn-secondary btn-sm">Back</a>
+        </tr> 
+            </tbody>
+           
+            
+      
+      </form>
+      </table>
+         </div>
+    </div>
+    
+    </div></center>
+{% endblock %}
+
+</body>
+</html>

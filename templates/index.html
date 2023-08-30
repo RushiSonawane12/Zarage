@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+
+<script>
+  function preventBack(){window.history.forward();}
+  setTimeout("preventBack()", 0);
+  window.onunload=function(){null};
+</script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="static/images/favicon.png" type="image/x-icon">
+  <title>Zarage</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css " />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.static/css" />
+  <!-- font awesome style -->
+  <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="static/css/responsive.css" rel="stylesheet" />
+
+   
+</head>
+<script>
+  function preventBack(){window.history.forward();}
+  setTimeout("preventBack()", 0);
+  window.onunload=function(){null};
+</script>
+<div class="fs-4 mb-3">
+  <div class="col">
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-success alert-dismissble fade show" role="alert">
+    {{message}}</div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+  </div>
+<body>
+  
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container px-0">
+          <a class="navbar-brand" href="/">
+            <span>
+              Zarage
+            </span>
+          </a>
+          <div class="contact_nav" id="">
+            <a href="#" class="link-box">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span>
+              123 E ward Shahupuri
+            </span>
+          </a>
+            <a class="nav-link" href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>Call : + 01 1234567890</span>
+            </a>
+            <a class="nav-link" href="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>Service123@gmail.com</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="custom_nav2">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex  flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/about">About </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/service">Services </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/team">Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/feedback">Feedback</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/checkavailability">Check availability</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/checkavailability1">User</a>
+                  </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+<!--      <a href="/admin"><button type="button">Admin</button> </a>-->
+      <div class="slider_container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="detail-box">
+                      <h1>
+                        We Care For <br>
+                        Your Car
+                      </h1>
+                      <p>
+                        The happy feeling that comes with satisfied customers, is what we fix on.
+                      </p>
+                      <div class="btn-box">
+                        <a href="/about" class="btn-1">
+                          Read More
+                        </a>
+                        <a href="/feedback" class="btn-2">
+                          Feedback
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="img-box">
+                      <img src="static/images/slider-img.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item ">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="detail-box">
+                      <h1>
+                        We Care For <br>
+                        Your Car
+                      </h1>
+                      <p>
+                       The happy feeling that comes with satisfied customers, is what we fix on.
+                      </p>
+                      <div class="btn-box">
+                        <a href="/about" class="btn-1">
+                          Read More
+                        </a>
+                        <a href="/feedback" class="btn-2">
+                          Feedback
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="img-box">
+                      <img src="static/images/contact-img.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item ">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="detail-box">
+                      <h1>
+                        We Care For <br>
+                        Your Car
+                      </h1>
+                      <p>
+                        The happy feeling that comes with satisfied customers, is what we fix on.
+                      <div class="btn-box">
+                        <a href="/about" class="btn-1">
+                          Read More
+                        </a>
+                        <a href="/feedback" class="btn-2">
+                          feedback
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="img-box">
+                      <img src="static/images/tyreservice.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="img-box ">
+            <img src="static/images/about-img.jpg" class="box_img" alt="about img">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="detail-box pr-md-2">
+            <div class="heading_container">
+              <h2 class="">
+                About Us
+              </h2>
+            </div>
+            <p class="detail_p_mt">
+               ZARAGE is pleased to welcome you to our website. As a provider of top-quality repair services, our repair shop is dedicated to our customers and maintaining our reputation of being the best choice for all of your repair & service needs. 
+            
+            </p>
+            <a href="/about" class="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- about section ends -->
+
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center ">
+        <h2 class="">
+          Services We Offer
+        </h2>
+        <p class="col-lg-8 px-0">
+          If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box ">
+            <div class="img-box">
+              <img src="static/images/s1.jpg" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                Car Inspection
+              </h5>
+              <p>
+                when looking at its layout. The point of using Lorem Ipsum is
+                that it has a more-or-less normal
+              </p>
+              <a href="/inspection">
+                Read More <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box ">
+            <div class="img-box">
+              <img src="static/images/s2.jpg" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                Car Cleaning
+              </h5>
+              <p>
+                when looking at its layout. The point of using Lorem Ipsum is
+                that it has a more-or-less normal
+              </p>
+              <a href="/wash">
+                Read More <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box ">
+            <div class="img-box">
+              <img src="static/images/s3.jpg" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                Car Repair
+              </h5>
+              <p>
+                when looking at its layout. The point of using Lorem Ipsum is
+                that it has a more-or-less normal
+              </p>
+              <a href="/repair">
+                Read More <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- service section ends -->
+
+  <!-- team section -->
+
+  <section class="team_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Our Team
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="static/images/t1.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Evan Campbell
+              </h5>
+              <h6>
+                Mechanic
+              </h6>
+              <div class="social_box">
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="static/images/t2.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Martin Williams
+              </h5>
+              <h6>
+                Mechanic
+              </h6>
+              <div class="social_box">
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="static/images/t3.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                John Doe
+              </h5>
+              <h6>
+                Mechanic
+              </h6>
+              <div class="social_box">
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- end team section -->
+
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="form_container">
+            <div class="heading_container">
+              <h2>
+                Feedback
+              </h2>
+            </div>
+            <form action="/feedback" method="POST">
+              <div class="modal-body">
+                {{msg}}
+              </div>
+              <div>
+                <input type="text" name="fullname" placeholder="Full Name " />
+              </div>
+              <div>
+                <input type="email" name="email_id" placeholder="Email" />
+              </div>
+              <div>
+                <input type="text" name="phoneno" placeholder="Phone number" />
+              </div>
+              <div>
+                <input type="text" name="message" class="message-box" placeholder="Message" />
+              </div>
+              <div class="d-flex ">
+                <button onclick="alert('Hello\nYour Feedback Send Successfully.......')">
+                  SEND
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="img-box">
+            <img src="static/images/contact-img.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center psudo_white_primary mb_45">
+        <h2>
+          What Says Our Clients
+        </h2>
+      </div>
+      <div class="carousel-wrap ">
+        <div class="owl-carousel client_owl-carousel">
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="static/images/client1.jpg" alt="" class="box-img">
+              </div>
+              <div class="detail-box">
+                <div class="client_id">
+                  <div class="client_info">
+                    <h6>
+                      LusDen
+                    </h6>
+                    <p>
+                      magna aliqua. Ut
+                    </p>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="static/images/client2.jpg" alt="" class="box-img">
+              </div>
+              <div class="detail-box">
+                <div class="client_id">
+                  <div class="client_info">
+                    <h6>
+                      Zen Court
+                    </h6>
+                    <p>
+                      magna aliqua. Ut
+                    </p>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+  <!-- map section -->
+
+  <section class="map_section">
+    <div class="map_container">
+      <div class="map">
+        <div id="googleMap"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end map section -->
+
+  <!-- info section -->
+
+  <section class="info_section ">
+    <div class="info_container ">
+      <div class="container">
+        <div class="info_contact ">
+          <a href="#" class="link-box">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span>
+              123 E ward Shahupuri
+            </span>
+          </a>
+          <a href="#" class="link-box">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span>
+              Call +01 1234567890
+            </span>
+          </a>
+          <a href="#" class="link-box">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>
+              Service123@gmail.com
+            </span>
+          </a>
+        </div>
+        <div class="social_container">
+          <div class="heading_container heading_center">
+            <h2>
+              Follow Us
+            </h2>
+            <p class="col-md-6 col-lg-5 mx-auto px-0">
+              Aliquam, aut. Quam adipisci error nulla repellendus nihil asperiores, deserunt sed veritatis. Dolores magnam aperiam omnis! Architecto odit consectetur maxime consequatur ipsum.
+            </p>
+          </div>
+          <div class="social-box">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-youtube" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- jQery -->
+  <script src="static/js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.static/js"></script>
+  <!-- bootstrap js -->
+  <script src="static/js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.static/js"></script>
+  <!-- custom js -->
+  <script src="static/js/custom.js"></script>
+  <!-- Google Map -->
+   
+
+</body>
+
+</html>

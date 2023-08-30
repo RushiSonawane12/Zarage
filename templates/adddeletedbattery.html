@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+ <!DOCTYPE html>
+<html lang="en">
+<body>
+{% block content %}
+
+
+<center>
+<h3 class="fs-4 mb-3">Add Service</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover" style="width: 60%">
+      <tbody>
+        
+        <form action="/adddeletedbattery/{{id}}/{{car}}" method="POST">
+        <tr>
+        {% for data4 in data3 %}                   
+          <th>Model</th>
+          <td>
+                <input type="text" name="model" value="{{data4[1]}}" required>
+          </td>
+          </tr> 
+          <tr>                   
+          <th>Battery</th>
+          <td>
+                <input type="text" name="batteryname" value="{{data4[2]}}" required>
+          </td>
+          </tr>
+          <tr>
+          <th>Capacity</th>
+          <td>
+                <input type="text" name="capacity" value="{{data4[3]}}" required> 
+          </td>
+          </tr>
+          <tr>
+          <th>Warranty</th>
+          <td>
+                <input type="text" name="warranty" value="{{data4[4]}}" required>
+          </td>
+          </tr>
+          <tr>
+          <th>Price</th>
+          <td>
+              <input type="text" name="price" value="{{data4[5]}}" required>
+          </td>
+          </tr>
+          <tr>
+            {% endfor %}
+          <td><button type="submit" class="btn btn-secondary">Add</button>
+          </td>
+        </tr>   
+      </form>
+   
+      </tbody>
+</center>
+     </div>
+    </div>
+    </div>   
+{% endblock %}
+</body>
+</html>

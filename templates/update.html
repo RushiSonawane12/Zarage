@@ -1,0 +1,45 @@
+{% extends "userbase.html" %}
+ <!DOCTYPE html>
+<html lang="en">
+<body>
+{% block content %}
+
+
+
+<h3 class="fs-4 mb-3 primary-text" align="center">Profie</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover" style="width:50%" align="center">
+      <tbody>
+        
+        <form action="/update" method="post"> 
+            <div class="msg primary-text" align="center">{{ msg }}</div>
+          <tr>                   
+          <th>Name</th>
+          <td>
+                <input type="text" name="fullname" placeholder="Enter Your Name" id="fullname">
+          </td>
+          </tr>
+          <tr>
+          <th>Phone no</th>
+          <td>
+                <input type="text" name="phoneno" placeholder="phoneno" id="phoneno">
+          </td>
+          </tr>
+          <tr>
+          <th>Email_id</th>
+          <td>
+                <input type="text" name="email_id" placeholder="email_id" id="email_id">
+          </td>
+          </tr>
+          
+          <td><button type="submit" class="btn btn-secondary">Update</button>
+          </td>
+        </tr>
+          </tbody>     
+      </form>
+     </div>
+    </div>
+    </div>   
+{% endblock %}
+</body>
+</html>

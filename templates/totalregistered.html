@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}  
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        {% block content %}
+        <center><h3 class="fs-4 mb-3">Total Customer Registered</h3></center>
+            <div class="col">
+                <form action="customerreport">
+                    <div>
+         <button type="submit" class="btn btn-secondary">Download Report</button></h5></div><br>
+                <table class="table bg-white rounded shadow-sm  table-hover">
+
+                    <thead>
+                         <tr>
+                                   
+                            <th>Customer No</th>
+                            <th>Customer Name</th>
+                            <th>Phone number</th>
+                            <th>Email_id</th>
+                            <th>Password</th>
+                                </tr>
+                            </thead>
+                             {% set n=namespace(c=0) %}
+                            <tbody>
+                                {% for data in customer %}
+                                <tr>
+                                    {% set n.c=n.c+1 %}
+                                    <td>{{n.c}}</td>
+                                    <td>{{data [1]}}</td>
+                                    <td>{{data [2]}}</td>
+                                    <td>{{data [3]}}</td>
+                                    <td>{{data [4]}}</td>
+                                </tr> 
+                               {% endfor %}
+                               <tr>
+          
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+       
+    {% endblock %}
+</body>
+</html>

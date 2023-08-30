@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+ 
+.wrapper{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.serviceform{
+	background: #ffffff;
+	padding: 80px;
+	border-radius: 5px;
+	width: 650px;
+}
+
+.serviceform .title{
+	text-align: center;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #ff5722;
+	letter-spacing: 5px;
+	font-weight: 700;
+}
+
+.form_wrap{
+	margin-top: 35px;
+}
+
+.form_wrap .input_wrap{
+	margin-bottom: 15px;
+}
+
+.form_wrap .input_wrap:last-child{
+	margin-bottom: 0;
+}
+
+.form_wrap .input_wrap label{
+	display: block;
+	margin-bottom: 3px;
+	color: #000000;
+
+}
+
+.form_wrap .input_grp{
+	display: flex;
+	justify-content: space-between;
+}
+
+.form_wrap .input_grp  input[type="text"]{
+	width: 165px;
+}
+
+.form_wrap  input[type="text"]{
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #000000;
+	padding: 10px;
+	outline: none;
+}
+.form_wrap  input[type="text"]:focus{
+	border-color: #ff5722;
+}
+.form_wrap  select{
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #000000;
+	padding: 10px;
+	outline: none;
+}
+
+.form_wrap  select:focus{
+	border-color: #ff5722;
+}
+
+.form_wrap ul{
+	background: #fff;
+	padding: 8px 10px;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+}
+
+.form_wrap ul li:first-child{
+	margin-right: 15px;
+}
+
+.form_wrap  input[type="date"]:hover{
+		color:  #ff5722;
+}

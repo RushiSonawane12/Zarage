@@ -1,0 +1,140 @@
+{% extends "userbase.html" %}
+ 
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+   
+
+<center><h3 class="primary-text">Service History</h3>
+<div class="col">
+
+    <table class="table bg-white rounded shadow-sm  table-hover" style="width:55%" >
+      <tbody>
+<h4>
+        {% for value in customer %}    
+             <tr>               
+            <th>Service_no:</th>
+            <td>
+                 {{value[0]}}
+            </td>
+           </tr>
+           <tr>
+              <th>Customer Name:</th>
+              <td>
+               {{value[1]}}
+              </td>
+            </tr>
+            <tr>
+              <th>Car Model:</th>
+              <td>
+               {{value[2]}}
+            </td>
+           </tr>
+           <tr>
+              <th>
+              Car Type:</th>
+              <td>
+               {{value[3]}}
+            </td>
+            </tr>
+            <tr>
+              <th>Car Registration_no:</th>
+              <td>
+               {{value[4]}}
+            </td>
+            </tr>
+            <tr>
+              <th>Service_Type:</th>
+              <td>
+               {{value[5]}}
+            </td>
+            </tr>
+           
+            <tr>
+              <th>Delivery Type:</th>
+                <td>
+               {{value[8]}}
+              </td>
+            </tr>
+            <tr>
+            <th>Pickup Address:</th>
+              <td>
+                {{value[9]}}
+              </td>
+            </tr>
+            <tr>
+            <th>Pickup Date:</th>
+              <td>
+                {{value[6]}}
+              </td>
+            </tr>
+            <tr>
+            <th>Pickup Time:</th>
+              <td>
+                {{value[7]}}
+              </td>
+            </tr>
+            <tr>
+              <th>Drop Address:</th>
+                <td>
+                {{value[10]}}
+              </td>
+            </tr>
+            <tr>
+            <th>Drop Date:</th>
+              <td>
+                {{value[11]}}
+              </td>
+            </tr>
+            <tr>
+            <th>Drop Time:</th>
+              <td>
+                {{value[12]}}
+              </td>
+            </tr>
+            <tr>
+              <th>Admin Respond:</th>
+                <td>
+                {{value[13]}}
+              </td>
+            </tr>
+            <tr>
+              <th>Service By:</th>
+                <td>
+                {{value[14]}}
+              </td>
+            </tr>
+            <tr>
+              <th>Pincode:</th>
+                <td>
+                {{value[15]}}
+              </td>
+            </tr>
+             <tr>
+              <th>Services</th> <td>
+              {% for value in customer1 %}
+             {{value[0]}}<br>
+              {% endfor %}</td>
+            </tr>
+            
+             <tr>
+      <th></th> 
+          <td width="130">
+            <a href="/userserviceform" class="btn btn-secondary btn-sm">Back</a>
+          
+          <!-- <td width="130"> -->
+            <a href="/userserviceformbillview/{{value[0]}}" class="btn btn-secondary btn-sm">View</a></td>
+        </tr>  {% endfor %}
+       </h4>  
+      </form>
+      </tbody>  
+     
+    </div>   
+  </center>
+
+
+</body>
+</html>
+{% endblock %}

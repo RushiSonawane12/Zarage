@@ -1,0 +1,40 @@
+{% extends "userbase.html" %}
+<html lang="en">
+<body>
+{% block content %}
+<center>
+<h3 class="fs-4 mb-3" ><div class="primary-text">Total Enquiry Responded</div></h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover" style="width:70%">
+      <thead>
+        <tr>
+            
+            <th>Enquiry_id</th>                  
+            <th>customer Email</th>
+            <th>Responded Date</th>
+            </tr>
+          </thead>
+           {% set n=namespace(c=0) %}
+        <tbody>
+          {% for data in customer %}
+        <tr>
+           {% set n.c=n.c+1 %}
+          <td>{{n.c}}</td>
+          <td>{{session['email_id']}}</td>
+          <td>{{data [1]}}</td>
+          <td width="130">
+            <a href="/userenquiryview/{{data[0]}}" class="btn btn-secondary btn-sm">view</a>
+        </tr> 
+          {% endfor %}
+      
+
+        </tbody>
+        </table>
+         </div>
+    </div>
+    
+    </div></center>
+{% endblock %}
+
+</body>
+</html>

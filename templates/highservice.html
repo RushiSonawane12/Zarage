@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}  
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        {% block content %}
+        <h3 class="fs-4 mb-3"></h3>
+            <div class="col">
+                <form action="/highservicereportdownload" method="">
+                    <div>
+                     <button type="submit" class="btn btn-secondary">Download</button></div><br>
+                <table class="table bg-white rounded shadow-sm  table-hover" style="width: 70%">
+                    <thead>
+                         <tr>
+                                   
+                            <th>Srno</th>
+                            <th>Model</th>
+                            <th>Car Type</th>
+                            <th>Service_Type</th>
+                            <th>Number of Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% set n=namespace(c=0) %}
+                                {% for data in customer %}
+                                   
+                                    <tr>
+                                        {% set n.c=n.c+1 %}
+                                        <td>{{n.c}}</td>
+                                        <td>{{data [0]}}</td>
+                                        <td>{{data [3]}}</td>
+                                        <td>{{data [2]}}</td>
+                                        <td>{{data [1]}}</td>
+                               
+                               {% endfor %}
+                               
+                            </tbody>
+                        </table>
+                        <div class="container-fluid px-4 primary-text">
+            <div class="col-md-3">
+                            <div>
+                                <img src="static/images/highest1.jpg" alt="" id='imagesize'>
+
+                            </div>
+                            
+                        </div>
+            </div>
+                    </form>
+                    </div>
+                </div>
+
+            </div>
+       
+    {% endblock %}
+</body>
+</html>

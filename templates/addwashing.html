@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+ <!DOCTYPE html>
+<html lang="en">
+<body>
+{% block content %}
+
+
+
+<h3 class="fs-4 mb-3">Add Service</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover">
+      <tbody>
+        
+        <form action="" method="POST"> 
+            <tr>                   
+            <th>Cartype</th>
+            <td>
+                  <input type="text" name="cartype" placeholder="Enter Cartype" required>
+            </td>
+            </tr>
+            <tr>
+            <th>Exterior Washing</th>
+            <td>
+                  <input type="text" name="exteriorwashing" placeholder="Enter price" required>
+            </td>
+            </tr>
+            <tr>
+            <th>Eco Washing</th>
+            <td>
+                  <input type="text" name="ecowashing" Placeholder="Enter price" required>
+            </td>
+            </tr>
+            <tr>
+            <th>Interior Washing</th>
+            <td>
+                  <input type="text" name="interiorwashing" placeholder="Enter price" required>
+            </td>
+            </tr>
+            <tr>
+            <td><button type="submit" class="btn btn-secondary">Submit</button>
+            </td>
+          </tr>
+            </tbody>     
+      </form>
+      </tbody>
+     </div>
+    </div>
+    </div>   
+{% endblock %}
+</body>
+</html>

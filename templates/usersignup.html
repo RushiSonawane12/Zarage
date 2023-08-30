@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="1tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" contect="width=device-width,initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/a076d05399.js" ></script>
+        <link rel="stylesheet" href="static/css/signin.css"/>
+
+        <title> signup </title>      
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="title"><span>Sign Up Form</span></div>
+                <form action="{{ url_for('usersignup') }}" method="post">
+                <div class="msg">{{ msg }}</div>
+                <div class="row">
+                    <i class="fas fa-user-circle"></i>
+                    <input  id="fullname" name="fullname" type="text" placeholder="Enter Your Name" required/>
+                </div>
+                <div class="row">
+                    <i class="fas fa-phone-alt"></i>
+                    <input  id="phoneno" name="phoneno" type="text" placeholder="phoneno" required/>
+                </div>
+                 
+                <div class="row">
+                    <i class="fas fa-envelope-square"></i>
+                    <input  id="email_id" name="email_id" type="text" placeholder="Enter Your email_id" required/>
+                </div>
+                    <div class="row">
+                    <i class="fas fa-lock"></i>
+                    <input  id="password" name="password" type="password" placeholder="Enter Your Password" required/>
+                </div>
+                   
+                    
+                    <div class="row button">
+                    <input type="submit"  value="Sign Up"></br></br>
+                </div>
+                 <div class="signup-link">Already have an account?<a href="/usersignin">Signin Here</a></div>
+
+                
+                </form>
+            
+            </div>
+        </div>
+
+    </body>
+</html>
+

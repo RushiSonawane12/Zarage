@@ -1,0 +1,62 @@
+{% extends "userbase.html" %}
+
+{% block content %}
+<html>
+<head> 
+
+
+    <meta charset="UTF-8">
+        
+        <meta name="viewport" contect="width=device-width,initial-scale=1.0">
+     
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link rel="stylesheet" href="static/css/service.css"/>
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'> 
+     
+
+        <style>
+        .data{
+        display: None;
+        }
+      </style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <div class="serviceform">
+    <div class="title">
+      Select the Type
+    </div>
+      <form action="" method="POST">
+      <div class="msg primary-text"><center>{{msg}}</center></div>
+      <div class="form_wrap">
+        <div class="input_grp">
+          <div class="form_wrap">
+            <label for="model"><h5>Select the Battery type and capacity:</h5></label><br>
+              {% for value in data %}
+                <input type="radio" name="bname" value={{value[0]}}>
+                <label for={{value[0]}}>{{value[0]}}</label>  
+                <input type="radio" name="capacity" value={{value[1]}}>     
+                <label value={{value[1]}} name="capacity">{{value[1]}}</label>
+                <label value={{value[2]}} >({{value[2]}})</label> <br>
+                {% endfor %}  
+          </div>
+       </div>
+     </div></br>
+       
+      
+         <button type="submit" class="btn btn-secondary">Submit</button>
+       
+      </div>
+    </form>
+  </div>
+</div>
+ 
+</body>
+</html>
+{% endblock %}

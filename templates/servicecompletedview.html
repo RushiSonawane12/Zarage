@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+<html lang="en">
+<body>
+{% block content %}
+
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        {{ message }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endwith %}
+
+
+
+
+
+<center>
+<h3 class="fs-4 mb-3">Total Service Completed</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover" style="width:50%">
+       
+          {% for value in data1 %}
+            <tr> 
+            <th>Customer Name</th>
+        
+          <td>{{value [0]}}</td>
+      </tr>
+        {% for value in data2 %}
+
+        <tr>
+
+         <th>Bill no</th> 
+          <td>{{value [0]}}</td>
+           </tr>
+            <tr>
+           <th>Bill_Date</th>
+          <td>{{value [1]}}</td>
+           </tr>
+            <tr>
+          {% endfor %}
+          {% for value in data1 %}
+           <th>Service_id</th> 
+           <td>{{value[1]}} </td> 
+            </tr>
+             <tr>    
+           <th>Model</th>
+          <td>{{value[2]}}</td>
+           </tr>
+            <tr>
+          <th>Cartype</th>
+            
+        <td>{{value[3]}}</td>
+         </tr>
+          <tr>
+        <th>Car_Registration</th>
+        <td>{{value[4]}}</td>
+         </tr>
+          <tr>
+        <th>Service Status</th>
+           
+        <td>{{value[5]}}</td>
+         </tr>
+          <tr>
+        <th>Service By</th>
+           
+        <td>{{value[6]}}</td>
+         </tr>
+          <tr>
+        {% endfor %}
+         {% for value in data2 %}
+       
+         <th>Bill Status</th>
+            <td>{{value[2]}}</td>
+             </tr>
+             <tr>
+             <th>Paid_Date</th>
+            <td>{{value[3]}}</td>
+             </tr>
+
+              <tr>
+         <th>Total Bill</th>
+        <td>{{value[4]}}</td>
+       {% endfor %}
+       </tr>
+         
+        <tr>
+      <th></th>
+          <td width="130">
+            <a href="/servicecompleted" class="btn btn-secondary btn-sm">Back</a><td>
+           
+        </tr> 
+          {% endfor %}
+      
+
+        </tbody>
+        </table>
+         </div>
+    </div>
+    
+    </div>
+    </center>
+{% endblock %}
+
+</body>
+</html>

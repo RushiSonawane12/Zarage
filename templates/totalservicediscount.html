@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+ <!DOCTYPE html>
+<html lang="en">
+<body>
+{% block content %}
+
+
+
+<center><h3 class="fs-4 mb-3">Billing</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover">
+      <tbody>
+        <table class="table bg-white rounded shadow-sm  table-hover" style="width:70%" >
+      <tbody>
+
+        {% for value in data %} 
+        <form action="/adddiscount/{{value[0]}}" method="POST"> 
+             <tr>               
+            <th>Service_no:</th>
+            <td>
+                 {{value[0]}}
+            </td>
+           </tr>
+           <tr>
+              <th>Customer Name:</th>
+              <td>
+               {{value[1]}}
+              </td>
+            </tr>
+            <tr>
+              <th>Car Model:</th>
+              <td>
+               {{value[2]}}
+            </td>
+           </tr>
+           <tr>
+              <th>
+              Car Type:</th>
+              <td>
+               {{value[3]}}
+            </td>
+            </tr>
+            <tr>
+              <th>Car Registration_no:</th>
+              <td>
+               {{value[4]}}
+            </td>
+            </tr>
+            <tr>
+              <th>Service_Type:</th>
+              <td>
+               {{value[5]}}
+            </td>
+            </tr>
+           <tr>
+              <th>Selected Services</th> <td>
+              {% for value in data1 %}
+                {{value[0]}}<br>
+              {% endfor %}</td>
+            </tr>
+            <tr>
+              <th>Delivery Type:</th>
+                <td>
+               {{value[6]}}
+              </td>
+            </tr>
+            <tr>
+            <th>Pickup Address:</th>
+              <td>
+                {{value[7]}}
+              </td>
+            </tr>
+            <tr>
+            <th>Pickup Date:</th>
+              <td>
+                {{value[8]}}
+              </td>
+            </tr>
+            <tr>
+            <th>Pickup Time:</th>
+              <td>
+                {{value[9]}}
+              </td>
+            </tr>
+            <tr>
+            <th>Drop Address:</th>
+              <td>
+                {{value[10]}}
+              </td>
+            </tr>
+            <tr>
+            <th>Drop Date:</th>
+              <td>
+                {{value[11]}}
+              </td>
+            </tr>
+            <tr>
+              <th>Drop Time:</th>
+                <td>
+                {{value[12]}}
+              </td>
+            </tr>
+            <tr>
+              <th>Customer Registation Date:</th>
+                <td>
+                {{value[13]}}
+              </td>
+            </tr>
+            <tr>
+              <th>Admin Respond Date:</th>
+                <td>
+                {{value[14]}}
+              </td>
+            </tr>
+            <tr>
+              <th>Admin Respond:</th>
+                <td>
+                {{value[15]}}
+              </td>
+            </tr>
+            <tr>
+              <th>Pincode:</th>
+                <td>
+                {{value[16]}}
+              </td>
+            </tr>
+          {% endfor %}
+            <tr>                    
+          <th>Total Price</th>
+
+          <td>
+                <input type="text" name="totalprice" placeholder={{rate}} value={{rate}}>
+          </td>
+          </tr>
+           <tr>                    
+          <th>Discount</th>
+          <td>
+                <input type="text" name="discount" placeholder="Discount"/>%
+          </td>
+          </tr>
+          <tr>                    
+          <th>GST</th>
+          <td>
+                <input type="text" name="GST" placeholder="GST"/>%
+          </td>
+          </tr>
+            <tr>
+            <td><button type="submit" class="btn btn-secondary">Send</button>
+            </td>
+          </tr>
+          
+      </form>
+      </tbody>  
+     </div>
+    </div>
+    </div>   
+  </center> 
+{% endblock %}
+</body>
+</html>

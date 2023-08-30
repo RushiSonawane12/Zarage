@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}  
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        {% block content %}
+        <h3 class="fs-4 mb-3">Repair Service Updated Detail</h3>
+            <div class="col">
+                <table class="table bg-white rounded shadow-sm  table-hover">
+                    <thead>
+                         <tr>
+                                   
+                            <th>Service_id</th>
+                            <th>Car Name</th>
+                            <th>Service Name</th>
+                            <th>Actual price</th>
+                            <th>Updated price</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                                </tr>
+                            </thead>
+                             {% set n=namespace(c=0) %}
+                            <tbody>
+                                {% for data in customer %}
+                                <tr>
+                                    {% set n.c=n.c+1 %}
+                                    <td>{{n.c}}</td>
+                                    <td>{{data [1]}}</td>
+                                    <td>{{data [2]}}</td>
+                                    <td>{{data [3]}}</td>
+                                    <td>{{data [4]}}</td>
+                                    <td>{{data [5]}}</td>
+                                    <td>{{data [6]}}</td>
+                                </tr> 
+                               {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+       
+    {% endblock %}
+</body>
+</html>

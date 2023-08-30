@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+ <!DOCTYPE html>
+<html lang="en">
+<body>
+{% block content %}
+
+
+
+<h3 class="fs-4 mb-3">Baleno(Tyre Service)</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover">
+      <tbody>
+        
+        <form action="/balenotyreupdate/{{service1[0]}}/{{service1[1]}}" method="post"> 
+            <tr>                   
+            <th>Tyre name</th>
+            <td>
+                 {{service1[0]}}
+            </td>
+            </tr>
+            <tr>
+            <th>Size</th>
+            <td>
+                 {{service1[1]}}
+            </td>
+            </tr>
+            <tr>
+            <th>Price</th>
+            <td>
+                  <input type="text" name="price" value="{{service1[2]}}" reruired>
+            </td>
+            </tr>
+            <tr>
+          <th>Reason for updation</th>
+          <td>
+                <input type="text" name="description" placeholder="description" required>
+          </td>
+          </tr>
+            <tr>
+            <td><button type="submit" class="btn btn-secondary">Update</button>
+            </td>
+          </tr>
+            </tbody>     
+      </form>
+      </tbody>
+
+   
+     </div>
+    </div>
+    </div>   
+{% endblock %}
+</body>
+</html>

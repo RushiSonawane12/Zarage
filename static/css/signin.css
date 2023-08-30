@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-image: url("static/images/signin.css");
+}
+
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background-image: url("https://wallpapercave.com/wp/wp8664417.jpg");
+    background-size:  cover;
+    background-position: center;
+}
+.wrapper{
+    width: 380px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.wrapper .msg{
+    color: #4a4d54;
+    font-style: oblique;
+    font-weight: bold;
+    }
+
+.wrapper .title{
+    line-height: 80px;
+    background: #ff5722;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+}
+.wrapper form{
+    padding: 30px 25px 25px 25px;
+
+}
+.wrapper form .row{
+    height: 45px;
+    margin-bottom: 15px;
+    position: relative;
+
+}
+.wrapper form .row input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 60px ;
+    border-radius: 5px;
+    border: 1px soild lightgrey;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.wrapper form .row select{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 60px ;
+    border-radius: 5px;
+    border: 1px soild lightgrey;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+form .row input: focus{
+    border-color: #FF8C00;
+    box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+
+form .row input: select{
+    border-color: #FF8C00;
+    box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+
+
+}
+.wrapper form .row i{
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    color: #fff;
+    font-size: 18px;
+    background:#ff5722;
+    border: 1px soild #ff5722;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.wrapper form .pass{
+    margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+    color: #ff5722;
+    font-size: 17px;
+    text-decoration: none;
+
+}
+.wrapper form .pass a:hover{
+    text-decoration: underline;
+}
+.wrapper form .button input{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 0px;
+    background: #ff5722;
+    border: 1px soild #ff5722;
+    cursor: pointer;
+
+}
+.wrapper form .button input{
+    background: #ff5722;
+}
+.wrapper form .signup-link{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 17px;
+}
+.wrapper form .signup-link a{
+    color: #ff5722;
+    
+    text-decoration: none;
+
+}
+form .signup-link a:hover{
+    text-decoration: underline;
+}

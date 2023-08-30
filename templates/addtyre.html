@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+ <!DOCTYPE html>
+<html lang="en">
+<body>
+{% block content %}
+
+
+
+<h3 class="fs-4 mb-3"><center>Add Tyre</center></h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover" id="myTable">
+      <tbody>
+        
+        <form action="" method="POST"> 
+            <div class="msg primary-text" align="center">{{ msg }}</div>
+            <tr>                   
+            <th>Tyre Name</th>
+            <td>
+                  <input type="text" name="tyrename1" placeholder="Enter tyre name" required>
+            </td>
+            </tr>
+            <tr>
+            <th>Select Car Name</th>
+            <td><input type="checkbox" name="model[]" value="Baleno">
+                  <lable for="Baleno">Baleno</lable>
+                  <input type="checkbox" name="model[]" value="Ciaz">
+                  <lable for="Ciaz">Ciaz</lable>
+                  <input type="checkbox" name="model[]" value="Dzire">
+                   <lable for="Dzire">Dzire</lable>
+                  <input type="checkbox" name="model[]" value="Spresso">
+                  <lable for="Spresso">Spresso</lable>
+                  <input type="checkbox" name="model[]" value="Swift">
+                  <lable for="Swift">Swift</lable></td>
+
+            </tr>
+            <tr>
+            <th>price</th>
+            <td>
+                  <input type="text" name="price" placeholder="Enter tyre price" required>
+            </td>
+            </tr>
+            <tr>
+            <th>size</th>
+            
+            
+             <!-- <tr>                   
+            <th><label for="model">Car Model</label></th>
+            <td><select name="model" >
+                  <option value="">select the Model</option>
+                  <option value="Baleno">Baleno</option>
+                  <option value="Swift">Swift</option>
+                  <option value="Spresso">S-Presso</option>
+                  <option value="Dzire">Dzire</option>
+                  <option value="Ciaz">Ciaz</option>
+            </select></td></tr>
+             -->
+             
+               
+            
+            <td>
+                  <input type="text" name="tyresize1" Placeholder="Enter size" required>
+            </td>
+            </tr>
+            <tr>
+            <td><button type="submit" class="btn btn-secondary">Save</button>
+            </td>
+          </tr>
+            </tbody>     
+      </form>
+      </tbody>
+     </div>
+    </div>
+    </div>  
+
+
+<script src="{{url_for('static',filename='js/addrow.js')}}"></script>
+ 
+{% endblock %}
+</body>
+</html>

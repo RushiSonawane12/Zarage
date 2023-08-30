@@ -1,0 +1,79 @@
+
+
+{% extends "base.html" %}
+<html lang="en">
+<body>
+{% block content %}
+
+<head>
+    <style>
+  .button {
+   border-radius: 2PX; 
+  border: none;
+  color: white;
+  padding: 9px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+
+.button1 {background-color: #f44336;} /* Red */ 
+
+
+    </style> 
+</head>
+
+<div class="fs-4 mb-3">
+  <div class="col">
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-success alert-dismissble fade show" role="alert">
+    {{message}}</div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+</div>
+</div>
+
+<h3 class="fs-4 mb-3">Spresso Battery</h3>
+
+<div class="col">
+
+ <table class="table bg-white rounded shadow-sm  table-hover" style="width:70%">
+    <thead>
+      <tr>                    
+      
+        <th>Battery Name</th>
+        <th>Capacity</th>
+        <th>Warranty</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+ 
+<tbody>
+    {% for data4 in service4 %}
+    <tr>
+       <td>{{data4 [0]}}</td>
+      <td>{{data4 [1]}}</td>
+      <td>{{data4 [2]}}</td>
+      <td>{{data4 [3]}}</td>
+      <td width="130">
+        <a href="/editspressobattery/{{data4[0]}}" class="btn btn-secondary btn-sm">edit</a>
+        <button class="button button1" ><a href="/batteryspressodescription/{{data4[0]}}" style="color:white;" onclick="alert('Hello\nAre you sure you want to delete this service?')"><strong>delete</strong></button></a></td>
+
+    </tr> 
+    {% endfor %}
+    <td width="130">
+        <a href="/addspressobattery" class="btn btn-secondary btn-sm">Add</a></td>
+    </tbody> </table>
+</div>
+{% endblock %}
+
+</body>
+</html>

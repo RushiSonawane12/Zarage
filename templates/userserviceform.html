@@ -1,0 +1,42 @@
+
+{% extends "userbase.html" %}
+<html lang="en">
+
+<body>
+{% block content %}
+
+ 
+<center><h3 class="primary-text">Service History</h3>
+<div class="col">
+
+ <table class="table bg-white rounded shadow-sm  table-hover" style="width:70%">
+    <thead>
+      <tr>                    
+        
+              <th>Srno</th>
+              <th>Service_no</th>
+              <th>Customer Respond Date</th>
+              <th>Admin Respond Date</th>
+              </tr>
+              </thead>
+            <tbody>
+              {% set c=namespace(count=0) %}
+            {% for data in customer %}
+            <tr>
+              {% set c.count=c.count+1 %}
+              <td>{{c.count}}</td>
+              <td>{{data [1]}}</td>
+              <td>{{data [2]}}</td>
+              <td>{{data [3]}}</td>  
+      <td width="130">
+        <a href="/userserviceformview/{{data [0]}}" class="btn btn-secondary btn-sm">View</a>
+          </td>
+    </tr> 
+    {% endfor %}
+    
+    </tbody> </table>
+</div>
+{% endblock %}
+
+</body>
+</html>

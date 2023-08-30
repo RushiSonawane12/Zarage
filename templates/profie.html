@@ -1,0 +1,41 @@
+{% extends "userbase.html" %}
+
+{% block content %}
+
+
+
+<h3 class="fs-4 mb-3 primary-text" align="center">Profie</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover" style="width:50%" align="center">
+      <thead>
+        <tr>                    
+         <tr>                   
+          <th>Name</th>
+          <td>
+                {{customer['fullname']}}
+          </td>
+          </tr>
+          <tr>
+          <th>Phone no</th>
+          <td>
+                {{customer['phoneno']}}
+          </td>
+          </tr>
+          <tr>
+          <th>Email_id</th>
+          <td>
+               {{customer['email_id']}}
+          </td>
+          </tr>
+          <td width="130">
+            <a href="/update" class="btn btn-secondary btn-sm">edit</a></td>
+        </tr> 
+       
+        </tbody>
+        </table>
+         </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+    </div>
+{% endblock %}
+

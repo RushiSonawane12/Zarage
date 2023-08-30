@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+ 
+{% block content %}
+
+<h3 class="fs-4 mb-3">Edit Service</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover">
+      <tbody>
+        <form action="/washingupdate/{{service[0]}}" method="post">
+        <tr>                    
+          <th>Car Types</th>
+          <td>
+                <input type="text" name="cartype" value="{{service[0]}}" required>
+          </td>
+          </tr>
+          <tr>
+          <th>Exterior Washing</th>
+          <td>
+                <input type="text" name="exteriorwashing" value="{{service[1]}}" required>
+          </td>
+          </tr>
+          <th>Eco Washing</th>
+          <td>
+                <input type="text" name="ecowashing" value="{{service[2]}}" required>
+          </td>
+          <tr>
+          <th>Interior Washing</th>
+          <td>
+                <input type="text" name="interiorwashing" value="{{service[3]}}" required>
+          </td>
+          </tr>
+          <tr>
+          <td><button type="submit" class="btn btn-secondary">Update</button></td>
+          </tr>
+          </tbody>
+      </form>
+     </div>
+    </div>
+    </div>
+{% endblock %}

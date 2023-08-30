@@ -1,0 +1,60 @@
+
+{% extends "base.html" %}  
+<!DOCTYPE html>
+{% block content %}
+<html lang="en">
+<div class="fs-4 mb-3">
+  <div class="col">
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-success alert-dismissble fade show" role="alert">
+    {{message}}</div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+</div>
+</div>
+    <body>
+       
+        <h3 class="fs-4 mb-3">Deleted Repair Service Detail</h3>
+            <div class="col">
+                <table class="table bg-white rounded shadow-sm  table-hover">
+                    <thead>
+                         <tr>
+                                   
+                            <th>Srno</th>
+                            <th>Car Name</th>
+                            <th>Exterior Washing</th>
+                            <th>Eco Washing</th>
+                            <th>Interior Washing</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% set n=namespace(c=0) %}
+                                {% for data in customer %}
+                                <tr>
+                                    {% set n.c=n.c+1 %}
+                                    <td>{{n.c}}</td>
+                                    <td>{{data [1]}}</td>
+                                    <td>{{data [2]}}</td>
+                                    <td>{{data [3]}}</td>
+                                    <td>{{data [4]}}</td>
+                                     <td>{{data [5]}}</td>
+                                    <td>{{data [6]}}</td>
+                                     <td width="130">
+                                        <a href="/adddeletedwash/{{data[0]}}/{{data[1]}}" class="btn btn-secondary btn-sm">Add</a></td>
+                                </tr> 
+                               {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+       
+    {% endblock %}
+</body>
+</html>

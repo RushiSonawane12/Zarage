@@ -1,0 +1,182 @@
+
+
+
+{% extends "base.html" %}
+<html lang="en">
+<body>
+{% block content %}
+
+<head>
+    <style>
+  .button {
+   border-radius: 2PX; 
+  border: none;
+  color: white;
+  padding: 9px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+
+.button1 {background-color: #f44336;} /* Red */ 
+
+
+    </style> 
+</head>
+
+<center>
+
+<div class="col">
+
+<table class="table bg-white rounded shadow-sm  table-hover" style="width:70%">
+    <tbody>
+        
+        <tr>
+            <td colspan="4" rowspan="1">
+
+                <strong><h3 class="primary-text"><center>Zarage Service Center</center></h3></strong>
+            </td>
+        </tr>
+        
+       
+        <tr>
+            <td><strong>
+               Email:service123@gmail.com</strong>
+            </td>
+            <td colspan="2"><strong>
+               <center><h4>TAX INVOICE</h4></center></strong>
+            </td>
+
+            <td><strong>
+               Mobile no:8456963463</strong>
+            </td>
+            </tr> 
+        <tr>
+            <td colspan="4">
+                <strong><center>Address:123 E Ward Shahupuri,Kolhapur</center></strong>
+            </td>
+        </tr>
+        
+        
+        {% for value in data1 %}
+        <tr>
+            <td colspan="2">
+                Customer Name:{{value[0]}}
+            </td>
+            <th></th>
+            <td colspan="2">
+               Phone No:{{value[1]}}
+            </td>
+        </tr>
+        {% endfor %}
+         {% for value in data2 %}
+       
+        <tr>
+            <td colspan="2">
+                Bill_No:{{value[0]}}
+            </td>
+            <th></th>
+            <td colspan="2">
+               Date:{{value[1]}}
+            </td>
+            
+        </tr>
+        {% endfor %}
+      </tr>
+      <tr>
+            <td colspan="4">
+               Service_no:{{serviceno}}
+          
+            </td>
+          </tr>
+          <tr>
+            <th colspan="1"><center>
+               SNO</center>
+            </th>
+            <th colspan="1"><center>
+                SERVICE NAME</center>
+            </th>
+            <th colspan="2"><center>
+               PRICE</center>
+            </th>
+            
+        </tr>
+        
+    {% set ns=namespace(count=0) %}
+    {% for value in data3 %}
+     {% set ns.count=ns.count+1 %}
+        <tr>
+            <td colspan="1"><center>
+                {{ns.count}}</center>
+            </td></center>
+            <td colspan="1"><center>
+                {{value [0]}}</center>
+            </td></center>
+            <td colspan="2"><center>
+               {{value [1]}}</center>
+            </td>
+           
+        </tr>
+        {% endfor %}
+        {% for value in data4 %}
+        <tr>
+
+    <th></th>
+    <th ><center>Totalprice</center></th>
+    <td colspan="2"><center>{{value[0]}}</center></td></tr>
+    <tr>
+       
+       <th></th>
+    <th colspan="1"><center>Discount</center></th>
+    <td colspan="2"><center>{{value[1]}}%</center></td>
+  </tr>
+  <tr>
+    
+     <th></th>
+   <th colspan="1"><center>Netprice</center></th>
+    <td colspan="2"><center>{{value[2]}}</center><td>
+     
+      </tr>
+       <tr>
+      
+    <th></th>
+     <th><center>GST</center></th>
+    <td colspan="2"><center>{{value[3]}}%</center></td>
+  </tr>
+   <tr>
+   
+    <th></th>
+
+    <th> <center>TotalBill</center></th>
+    <td colspan="2"><center>{{value[4]}}</center></td>
+    {% endfor %}
+  </tr>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+
+    <td class="col-12">
+        <center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD5JCcUzs-NbysEV0MVNQuXqnpuAs4dBk76TLdJN5btQvyLGiB7KZ0cm7XrHzQwWUEtM4&usqp=CAU" width="126" height="75" alt="">
+        <p>Signature</p></center>
+    </td>
+
+  </tr>
+               
+        <tr>
+    <td width="130">
+        <button  class="btn btn-secondary btn-sm" onclick="window.print()">Print</button>
+        <a href="/admindashboard" class="btn btn-secondary btn-sm">Back</a></td></tr>
+    </tbody> </table>
+</div></center>
+
+
+{% endblock %}
+
+</body>
+</html>

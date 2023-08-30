@@ -1,0 +1,54 @@
+
+{% extends "base.html" %}  
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        {% block content %}
+        <h3 class="fs-4 mb-3"></h3>
+            <div class="col">
+                <form action="/batteryupdateddownload" method="">
+                    <div>
+                     <button type="submit" class="btn btn-secondary">Download</button></div><br>
+                <table class="table bg-white rounded shadow-sm  table-hover">
+                    <thead>
+                         <tr>
+                                   
+                            <th>Srno</th>
+                            <th>Car Name</th>
+                            <th>Service Name</th>
+                            <th>Capacity</th>
+                            <th>price</th>
+                            <th>Updated_Price</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% set n=namespace(c=0) %}
+                                {% for data in customer %}
+                                <tr>
+                                    {% set n.c=n.c+1 %}
+                                    <td>{{n.c}}</td>
+                                    <td>{{data [0]}}</td>
+                                    <td>{{data [1]}}</td>
+                                    <td>{{data [2]}}</td>
+                                    <td>{{data [3]}}</td>
+                                    <td>{{data [4]}}</td>
+                                    <td>{{data [5]}}</td>
+                                    <td>{{data [6]}}</td>
+                                   
+                                   
+                                </tr> 
+                               {% endfor %}
+                               
+                            </tbody>
+                        </table>
+                    </form>
+                    </div>
+                </div>
+
+            </div>
+       
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+<html lang="en">
+<body>
+{% block content %}
+
+
+<center><h3 class="fs-4 mb-3">Rejected Service View</h3>
+<div class="col">
+    <table class="table bg-white rounded shadow-sm  table-hover" style="width:50%">
+      {% for value in customer %} 
+        <form action="" method="post"> 
+           
+            
+             <tr>               
+            <th>Service_id:</th>
+            <td>
+                 {{value[1]}}
+            </td>
+           </tr>
+           <tr>
+              <th>Name:</th>
+              <td>
+               {{value[2]}}
+              </td>
+            </tr>
+            <tr>
+              <th>
+              Model:</th>
+              <td>
+               {{value[3]}}
+            </td>
+           </tr>
+           <tr>
+              <th>
+              Car Type:</th>
+              <td>
+               {{value[4]}}
+            </td>
+            </tr>
+            <tr>
+              <th>
+              Car Registration no:</th>
+              <td>
+               {{value[5]}}
+            </td>
+            </tr>
+            <tr>
+              <th>
+              Service Type:</th>
+              <td>
+               {{value[6]}}
+            </td>
+            </tr>
+            <tr>
+              <th>
+              Customer Respond Date:</th>
+              <td>
+               {{value[14]}}
+            </td>
+            </tr>
+            <tr>
+              <th>
+              Admin Respond Date:</th>
+              <td>
+               {{value[16]}}
+            </td>
+            </tr>
+            <tr>
+              <th>
+              Admin Status:</th>
+              <td>
+               {{value[17]}}
+            </td>
+            </tr>
+             <tr>
+              <th>
+              Pincode:</th>
+              <td>
+               {{value[18]}}
+            </td>
+            </tr>
+            
+          
+           {% endfor %}
+           <tr>
+              <th>Services</th> <td>
+              {% for value in customer1 %}
+             {{value[0]}}<br>
+              {% endfor %}</td>
+            </tr>
+             <tr>
+              <th>Reason For rejecting of service:</th> 
+              <td>
+              {% for value in customer3 %}
+                 {{value[0]}}<br>
+              {% endfor %}</td>
+            </tr>                
+          
+            <tr>
+      <th></th>
+          <td width="130">
+            <a href="/serviceformreject" class="btn btn-secondary btn-sm">Back</a><td>
+           
+        </tr> 
+            </tbody>
+           
+           
+      </form>
+      </table>
+         </div>
+    </div>
+    
+    </div></center>
+{% endblock %}
+
+</body>
+</html>
